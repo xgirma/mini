@@ -1,0 +1,25 @@
+.player {
+    width: 640px;
+    background-image: url("https://user-images.githubusercontent.com/5876481/36070532-37e4f332-0eb1-11e8-9e71-4a1cbec658fd.png");
+    background-size: 350px 258px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.media-player {
+    display: flex;
+    justify-content: center;
+}
+
+.navigation {
+    align-self: flex-start;
+    font-size: 200%;
+}
+
+.social-player {
+    text-align: center;
+    background: #FFFAF0;
+    color: black;
+    border: #F8F8FF;
+    border-radius: 8px;
+}

@@ -1,0 +1,26 @@
+.footer {
+    display: flex;
+    width: 640px;
+    border: 2px solid #F8F8FF;
+    border-radius: 8px;
+}
+
+.like-footer {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    width: 10%;
+    font-size: 220%;
+    color: black;
+    margin: 0px 0px 10px 10px;
+}
+
+.like-footer:hover {
+    color: #F8F8FF;
+}
+
+.now-playing-footer {
+    width: 90%;
+    margin: 0px 0px 10px 10px;
+}

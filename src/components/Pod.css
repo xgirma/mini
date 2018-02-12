@@ -1,0 +1,23 @@
+.pod {
+    width: 680px;
+}
+
+.pod:hover {
+    color: #FFFF00;
+    font-weight: bold;
+}
+
+#pod_pod {
+    display: flex;
+}
+
+.date_pod {
+    padding-left: 21px;
+    width: 13%;
+}
+
+.episode_title_pod {
+    width: 87%;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
