@@ -18,8 +18,24 @@ async function getTenLiked() {
   }
 }
 
+async function submitLike(id) {
+  try {
+    const response = await fetch(`${BASE_URL}/pods/${id}`, {
+      method: 'POSt',
+	    headers: {
+		    Accept: 'application/json',
+		    'Content-Type': 'application/json',
+	    },
+    });
+    return response.json();
+  } catch (err) {
+    throw Error(err);
+  }
+}
+
 export {
   getRecentTen,
   getTenLiked,
+  submitLike,
 };
 

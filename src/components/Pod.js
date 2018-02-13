@@ -30,14 +30,19 @@ class Pod extends Component {
 
 	  return (
   <div className="pod">
-    <a onClick={this.handleClick} id="pod_pod">
+    <div
+      role="link"
+      tabIndex="0"
+      onClick={this.handleClick}
+      id="pod_pod"
+    >
       <div className="date_pod">
         <b>{published} </b>
       </div>
       <div className="episode_title_pod">
         {pod.displayText}
       </div>
-    </a>
+    </div>
   </div>
 	  );
 	}

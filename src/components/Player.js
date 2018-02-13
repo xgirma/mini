@@ -45,9 +45,13 @@ class Player extends Component {
     <div>
       <div className="media-player">
         <div className="navigation">
-          <a onClick={this.handleBack}>
+          <div
+            onClick={this.handleBack}
+            role="link"
+            tabIndex="0"
+          >
             <MdSubdirectoryArrowLeft />
-          </a>
+          </div>
         </div>
         <ReactPlayer
           url={this.props.playlist[0].url}
@@ -55,9 +59,13 @@ class Player extends Component {
           controls
         />
         <div className="navigation">
-          <a onClick={this.handleForward}>
+          <div
+            role="link"
+            onClick={this.handleForward}
+            tabIndex="0"
+          >
             <MdSubdirectoryArrowRight />
-          </a>
+          </div>
         </div>
       </div>
       <div className="social-player">
