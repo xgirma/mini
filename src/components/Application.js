@@ -66,6 +66,10 @@ class Application extends Component {
 	  });
 	};
 
+	handleLike = () => {
+	  this.fetchRecentTen();
+	};
+
 	render() {
 	  const {
 	    playlist, isLoading, autoPlay,
@@ -88,7 +92,7 @@ class Application extends Component {
       onPodSelection={this.sortBySelectedPod}
       onAutoPlay={this.handleAutoPlay}
     />
-    <Footer playlist={playlist} />
+    <Footer playlist={playlist} onLike={this.handleLike} />
   </div>
 	  );
 	}

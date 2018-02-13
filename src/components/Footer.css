@@ -5,7 +5,7 @@
     border-radius: 8px;
 }
 
-.like-footer {
+.all-footer {
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -16,7 +16,15 @@
     margin: 0px 0px 10px 10px;
 }
 
-.like-footer:hover {
+#like:hover {
+    color: #F8F8FF;
+}
+
+#facebook:hover {
+    color: #F8F8FF;
+}
+
+#twitter:hover {
     color: #F8F8FF;
 }
 
