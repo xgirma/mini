@@ -8,7 +8,6 @@ import TiSocialTwitter from 'react-icons/lib/ti/social-twitter';
 import MdThumbUp from 'react-icons/lib/md/thumb-up';
 import './Footer.css';
 
-
 class Footer extends Component {
 	static propTypes = {
 	  playlist: playlistType,
@@ -20,16 +19,22 @@ class Footer extends Component {
 
 	displayName = 'Footer';
 
-	state = {};
+	state = {
+		like: 0
+	};
 
 	handleLike = (event) => {
 	  event.preventDefault();
-	  const { playlist, onLike } = this.props;
+	  const { playlist } = this.props;
 	  const playingNow = playlist[0];
 	  const { _id } = playingNow;
 	  try {
 	    submitLike(_id)
-	      .then(() => onLike());
+	      .then(() => {
+	      	this.setState({
+			      like: this.state.like + 1
+		      });
+	      });
 	  } catch (err) {
 	    throw Error(err);
 	  }
@@ -39,6 +44,8 @@ class Footer extends Component {
 	  const { playlist } = this.props;
 	  const playingNow = playlist[0];
 	  const { published } = playingNow;
+	  const { like } = this.state;
+
 
 	  return (
   <div className="footer">
@@ -65,7 +72,7 @@ class Footer extends Component {
         <br />{playingNow.description}
         <br />{playingNow.link}
         <br />Published: {moment(published, 'YYYYMMDD').fromNow()}
-        <br /><b>Likes: {playingNow.likes}</b>
+        <br /><b>Likes: { like + playingNow.likes }</b>
       </p>
     </div>
   </div>
