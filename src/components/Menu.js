@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import './Menu.css';
 
 class Menu extends Component {
@@ -12,11 +11,24 @@ class Menu extends Component {
 	state = {};
 	
 	render() {
+		const { onSort, sortByDate } = this.props;
+		
 		return (
 			<div className="menu">
-				<div className="menu-likes">{'Likes '} </div>
-				<div className="menu-playlist"> {'Playlist '} </div>
-				<div className="menu-contact-us"> {'Contact Us'}</div>
+				<div
+					role="link"
+					className="menu-likes"
+					onClick={onSort}
+				>
+					{sortByDate ? 'Top 10' : '10 Recent'}
+				</div>
+				
+				<div className="menu-playlist">
+					{'Playlist '}
+				</div>
+				<div className="menu-contact-us">
+					{'Contact Us'}
+				</div>
 			</div>
 		)
 	}

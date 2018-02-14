@@ -19,7 +19,7 @@ class TopTen extends Component {
 	displayName = 'TopTen';
 	
 	render() {
-		const {playlist, onPodSelection, onAutoPlay, onSort} = this.props;
+		const {playlist, onPodSelection, onAutoPlay, sortByDate} = this.props;
 		
 		return (
 			<div className="topTen">
@@ -29,6 +29,7 @@ class TopTen extends Component {
 							<Pod
 								key={pod._id}
 								pod={pod}
+								sortByDate={sortByDate}
 								onPodSelection={() => onPodSelection(pod._id)}
 								onAutoPlay={() => onAutoPlay(true)}
 							/>
