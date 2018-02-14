@@ -1,0 +1,13 @@
+.menu {
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.menu-likes + .menu-playlist {
+    margin-left: 12px;
+}
+
+.menu-likes + .menu-playlist + .menu-contact-us {
+    margin-left: 12px;
+}

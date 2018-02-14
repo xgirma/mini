@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { getRecentTen, getTenLiked } from '../api/api';
-import { Footer, Player, TopTen } from './index';
+import { Footer, Player, TopTen, Menu } from './index';
 import { playlistDefault } from '../data/default';
 import './Application.css';
 
@@ -12,6 +12,7 @@ class Application extends Component {
 	  isLoading: false,
 	  error: null,
 	  autoPlay: false,
+		sortByDate: true,
 	};
 
 	componentDidMount() {
@@ -65,10 +66,14 @@ class Application extends Component {
 	    playlist: newPlaylist,
 	  });
 	};
+	
+	handleSort = () => {
+	
+	};
 
 	render() {
 	  const {
-	    playlist, isLoading, autoPlay,
+	    playlist, isLoading, autoPlay, sortByDate,
 	  } = this.state;
 
 	  if (isLoading) {
@@ -88,7 +93,8 @@ class Application extends Component {
       onPodSelection={this.sortBySelectedPod}
       onAutoPlay={this.handleAutoPlay}
     />
-    <Footer playlist={playlist} />
+    <Footer playlist={playlist} sort={sortByDate}/>
+	  <Menu onSort={this.handleSort} />
   </div>
 	  );
 	}
