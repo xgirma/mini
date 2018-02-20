@@ -10,6 +10,7 @@ class Pod extends Component {
 	  pod: podType,
 	  onPodSelection: PropTypes.func.isRequired,
 	  onAutoPlay: PropTypes.func.isRequired,
+	  sortByDate: PropTypes.bool.isRequired,
 	};
 
 	static defaultProps = {

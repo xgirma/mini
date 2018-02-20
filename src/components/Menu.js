@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './Menu.css';
 
 class Menu extends Component {
-	static propTypes = {};
+	static propTypes = {
+	  onSort: PropTypes.func.isRequired,
+	  sortByDate: PropTypes.bool.isRequired,
+	};
 
-	static defaultProps = {};
+	static defaultProps = {
+	};
 
 	displayName = 'Menu';
 

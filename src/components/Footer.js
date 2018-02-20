@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import moment from 'moment';
-import { playlistType } from '../type';
-import { playlistDefault } from '../data/default';
-import { submitLike } from '../api/api';
 import FaFacebookSquare from 'react-icons/lib/fa/facebook-square';
 import TiSocialTwitter from 'react-icons/lib/ti/social-twitter';
 import MdThumbUp from 'react-icons/lib/md/thumb-up';
+import { playlistType } from '../type';
+import { playlistDefault } from '../data/default';
+import { submitLike } from '../api/api';
+
 import './Footer.css';
 
 class Footer extends Component {
