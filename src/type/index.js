@@ -1,4 +1,8 @@
-import PropTypes, { shape, number, string } from 'prop-types';
+import PropTypes, {
+  shape,
+  number,
+  string,
+} from 'prop-types';
 
 const podType = shape({
   url: string,
@@ -17,4 +21,7 @@ const podType = shape({
 
 const playlistType = PropTypes.arrayOf(podType);
 
-export { playlistType, podType };
+export {
+  playlistType,
+  podType,
+};

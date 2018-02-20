@@ -12,7 +12,7 @@ class Application extends Component {
 	  isLoading: false,
 	  error: null,
 	  autoPlay: false,
-		sortByDate: true,
+	  sortByDate: true,
 	};
 
 	componentDidMount() {
@@ -66,17 +66,17 @@ class Application extends Component {
 	    playlist: newPlaylist,
 	  });
 	};
-	
+
 	handleSort = () => {
-		this.setState({
-			sortByDate: !this.state.sortByDate,
-		}, () => {
-			if(this.state.sortByDate){
-				this.fetchRecentTen()
-			} else {
-				this.fetchTopTenLiked();
-			}
-		});
+	  this.setState({
+	    sortByDate: !this.state.sortByDate,
+	  }, () => {
+	    if (this.state.sortByDate) {
+	      this.fetchRecentTen();
+	    } else {
+	      this.fetchTopTenLiked();
+	    }
+	  });
 	};
 
 	render() {
@@ -102,8 +102,8 @@ class Application extends Component {
       onPodSelection={this.sortBySelectedPod}
       onAutoPlay={this.handleAutoPlay}
     />
-    <Footer playlist={playlist} sortByDate={sortByDate}/>
-	  <Menu onSort={this.handleSort} sortByDate={sortByDate} />
+    <Footer playlist={playlist} sortByDate={sortByDate} />
+    <Menu onSort={this.handleSort} sortByDate={sortByDate} />
   </div>
 	  );
 	}

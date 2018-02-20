@@ -20,7 +20,7 @@ class Footer extends Component {
 	displayName = 'Footer';
 
 	state = {
-		like: 0
+	  like: 0,
 	};
 
 	handleLike = (event) => {
@@ -32,7 +32,7 @@ class Footer extends Component {
 	    submitLike(_id)
 	      .then(() => {
 	      	this.setState({
-			      like: this.state.like + 1
+			      like: this.state.like + 1,
 		      });
 	      });
 	  } catch (err) {
@@ -45,7 +45,6 @@ class Footer extends Component {
 	  const playingNow = playlist[0];
 	  const { published } = playingNow;
 	  const { like } = this.state;
-
 
 	  return (
   <div className="footer">
