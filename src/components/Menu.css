@@ -1,7 +1,7 @@
 .menu {
     display: flex;
     font-weight: bold;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .menu-likes + .menu-playlist {

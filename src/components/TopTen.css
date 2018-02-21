@@ -5,3 +5,19 @@
 .footer-menu {
     font-weight: bold;
 }
+
+.sort-link {
+    display: flex;
+    font-weight: bold;
+    justify-content: space-between;
+    margin: 0px 19px 5px 19px;
+}
+
+.sort-inactive {
+    color: black;
+    font-weight: bold;
+}
+
+.sort-inactive:hover {
+    color: #FFFF00;
+}

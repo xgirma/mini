@@ -66,7 +66,7 @@ class Footer extends Component {
     </div>
     <div className="now-playing-footer">
       <p>
-        <b>Now Playing: {playingNow.owner_name} </b>
+        <b>NOW PLAYING: {playingNow.owner_name} </b>
         <br />{playingNow.title}
         <br />{playingNow.displayText}
         <br />{playingNow.description}
