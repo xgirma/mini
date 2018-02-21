@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Loading from './Loading';
 import { getRecentTen, getTenLiked } from '../api/api';
 import { Footer, Player, TopTen, Menu } from './index';
 import { playlistDefault } from '../data/default';
@@ -89,7 +90,7 @@ class Home extends Component {
 		} = this.state;
 		
 		if (isLoading) {
-			return <p>Loading ... </p>;
+			return <Loading/>;
 		}
 		
 		return (

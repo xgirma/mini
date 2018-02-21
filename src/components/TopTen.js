@@ -35,7 +35,7 @@ class TopTen extends Component {
 								className="sort-inactive"
 								role="link"
 								onClick={onSort}
-							> {'<<'} TOP LIKED PODCAST</div>
+							> TOP LIKED PODCAST</div>
 						</div>):
 						(<div className="sort-link">
 							<div> TOP LIKED PODCAST</div>
@@ -43,7 +43,7 @@ class TopTen extends Component {
 								className="sort-inactive"
 								role="link"
 								onClick={onSort}
-							> {'<<'} RECENT PODCASTS</div>
+							> RECENT PODCASTS</div>
 						</div>)}
 				</div>
 				<div className="topTen">
