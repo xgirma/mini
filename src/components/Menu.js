@@ -1,32 +1,16 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
+import {HashRouter, Switch, Route, NavLink} from "react-router-dom";
 import './Menu.css';
 
-class Menu extends Component {
-	static propTypes = {
-		onSort: PropTypes.func.isRequired,
-		sortByDate: PropTypes.bool.isRequired,
-	};
-	
-	static defaultProps = {};
-	
-	displayName = 'Menu';
-	
-	state = {};
-	
-	render() {
-		
-		return (
-			<p>
-				<span className="menu playlist">
-					PLAYLIST
-				</span>
-				<span className="menu contact-us">
-					CONTACT US
-				</span>
-			</p>
-		);
-	}
-}
+const Menu = () => (<HashRouter>
+	<div>
+		<div className="menu">
+			<span className="sub-menu"> <NavLink to="/">Home</NavLink> </span>
+			<span className="sub-menu"> <NavLink to="/library">LIBRARY</NavLink> </span>
+			<span className="sub-menu"> <NavLink to="/about">ABOUT</NavLink> </span>
+		</div>
+	</div>
+
+</HashRouter>);
 
 export default Menu;

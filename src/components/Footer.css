@@ -16,16 +16,8 @@
     margin: 0px 0px 10px 10px;
 }
 
-#like:hover {
-    color: #F8F8FF;
-}
-
-#facebook:hover {
-    color: #F8F8FF;
-}
-
-#twitter:hover {
-    color: #F8F8FF;
+#like:hover, #facebook:hover, #twitter:hover {
+    color: #FFFF00;
 }
 
 .now-playing-footer {

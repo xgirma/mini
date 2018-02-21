@@ -1,13 +1,16 @@
 .menu {
     display: flex;
     font-weight: bold;
-    justify-content: space-around;
+    color: black;
+    margin: 10px 19px 5px 19px;
 }
 
-.menu-likes + .menu-playlist {
-    margin-left: 12px;
+.sub-menu {
+    font-weight: bold;
+    justify-content: space-between;
+    margin: 0px 10px 0px 10px;
 }
 
-.menu-likes + .menu-playlist + .menu-contact-us {
-    margin-left: 12px;
+.sub-menu:hover {
+    color: #FFFF00;
 }
