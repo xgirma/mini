@@ -14,7 +14,7 @@ class Library extends Component {
 	render() {
 		return (
 			<div className="Library">
-				{"Library ..."}
+				{"Library: coming soon ..."}
 			</div>
 		)
 	}
