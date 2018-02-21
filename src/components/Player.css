@@ -4,6 +4,10 @@
     background-size: 320px 228px;
     background-repeat: no-repeat;
     background-position: center;
+    border: 2px solid #F8F8FF;
+    border-radius: 8px;
+    background-color: #F8F8FF;
+    margin-bottom: 19px;
 }
 
 .media-player {
@@ -14,19 +18,16 @@
 .navigation {
     align-self: flex-start;
     font-size: 200%;
-    color: black;
+    color: #014421;
     font-weight: bold;
 }
 
-
 .navigation:hover {
-    color: #FFFF00;
+    color: #014421;
 }
 
 .social-player {
     text-align: center;
-    background: #FFFAF0;
-    color: black;
-    border: #F8F8FF;
+    color: #014421;
     border-radius: 8px;
 }

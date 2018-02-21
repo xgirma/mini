@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactPlayer from 'react-player';
-import MdSubdirectoryArrowLeft from 'react-icons/lib/md/subdirectory-arrow-left';
-import MdSubdirectoryArrowRight from 'react-icons/lib/md/subdirectory-arrow-right';
+import FaChevronRight from 'react-icons/lib/fa/chevron-right'
+import FaChevronLeft from 'react-icons/lib/fa/chevron-left'
 import { playlistDefault } from '../data/default';
 import { playlistType } from '../type';
 import './Player.css';
@@ -50,7 +50,7 @@ class Player extends Component {
             role="link"
             tabIndex="0"
           >
-            <MdSubdirectoryArrowLeft />
+            <FaChevronLeft />
           </div>
         </div>
         <ReactPlayer
@@ -64,7 +64,7 @@ class Player extends Component {
             onClick={this.handleForward}
             tabIndex="0"
           >
-            <MdSubdirectoryArrowRight />
+            <FaChevronRight />
           </div>
         </div>
       </div>

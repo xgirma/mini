@@ -109,7 +109,6 @@ class Home extends Component {
 					onSort={this.handleSort}
 				/>
 				<Footer playlist={playlist} sortByDate={sortByDate} />
-				<Menu onSort={this.handleSort} sortByDate={sortByDate} />
 			</div>
 		);
 	}
