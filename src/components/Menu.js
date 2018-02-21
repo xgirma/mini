@@ -1,5 +1,5 @@
 import React from 'react';
-import {HashRouter, Switch, Route, NavLink} from "react-router-dom";
+import {HashRouter, NavLink} from "react-router-dom";
 import './Menu.css';
 
 const Menu = () => (<HashRouter>
