@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {playlistType} from '../type';
 import {playlistDefault} from '../data/default';
 import Pod from './Pod';
-import './TopTen.css';
+import './Playlist.css';
 
 class TopTen extends Component {
 	static propTypes = {

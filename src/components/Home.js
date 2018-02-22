@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Loading from './Loading';
 import { getRecentTen, getTenLiked } from '../api/api';
-import { Footer, Player, TopTen, Menu } from './index';
+import { NowPlaying, Player, Playlist } from './index';
 import { playlistDefault } from '../data/default';
 import './Home.css';
 
@@ -95,20 +95,26 @@ class Home extends Component {
 		
 		return (
 			<div className="container-home">
-				<Player
-					playlist={playlist}
-					autoPlay={autoPlay}
-					onPodSelection={this.sortBySelectedPod}
-					onAutoPlay={this.handleAutoPlay}
-				/>
-				<TopTen
-					playlist={playlist}
-					sortByDate={sortByDate}
-					onPodSelection={this.sortBySelectedPod}
-					onAutoPlay={this.handleAutoPlay}
-					onSort={this.handleSort}
-				/>
-				<Footer playlist={playlist} sortByDate={sortByDate} />
+				<div className="item-player">
+					<Player
+						playlist={playlist}
+						autoPlay={autoPlay}
+						onPodSelection={this.sortBySelectedPod}
+						onAutoPlay={this.handleAutoPlay}
+					/>
+				</div>
+				<div className="item-playlist">
+					<Playlist
+						playlist={playlist}
+						sortByDate={sortByDate}
+						onPodSelection={this.sortBySelectedPod}
+						onAutoPlay={this.handleAutoPlay}
+						onSort={this.handleSort}
+					/>
+				</div>
+				<div className="item-now-playing">
+					<NowPlaying playlist={playlist} sortByDate={sortByDate} />
+				</div>
 			</div>
 		);
 	}

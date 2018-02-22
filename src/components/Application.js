@@ -11,14 +11,16 @@ const Application = () => (<div className="container-app">
 		<div className="item-header">
 			<Header />
 		</div>
-		<HashRouter>
-			<Switch>
-				<Route exact path="/" component={Home}/>
-				<Route path="/library" component={Library}/>
-				<Route path="/about" component={About}/>
-				<Route component={NoMatch}/>
-			</Switch>
-		</HashRouter>
+		<div className="item-body">
+			<HashRouter>
+				<Switch>
+					<Route exact path="/" component={Home}/>
+					<Route path="/library" component={Library}/>
+					<Route path="/about" component={About}/>
+					<Route component={NoMatch}/>
+				</Switch>
+			</HashRouter>
+		</div>
 	</div>
 );
 

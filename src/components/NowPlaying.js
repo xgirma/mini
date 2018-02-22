@@ -7,7 +7,7 @@ import { playlistType } from '../type';
 import { playlistDefault } from '../data/default';
 import { submitLike } from '../api/api';
 
-import './Footer.css';
+import './NowPlaying.css';
 
 class Footer extends Component {
 	static propTypes = {
