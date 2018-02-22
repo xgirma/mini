@@ -26,27 +26,27 @@ class TopTen extends Component {
 		} = this.props;
 		
 		return (
-			<div >
-				<div>
+			<div className="container-playlist">
+				<div className="item-sort">
 					{sortByDate ?
 						(<div className="sort-link">
-							<div>RECENT PODCASTS</div>
+							<div>RECENT</div>
 							<div
 								className="sort-inactive"
 								role="link"
 								onClick={onSort}
-							> TOP LIKED PODCAST</div>
+							> LIKED</div>
 						</div>):
 						(<div className="sort-link">
-							<div> TOP LIKED PODCAST</div>
+							<div> LIKED</div>
 							<div
 								className="sort-inactive"
 								role="link"
 								onClick={onSort}
-							> RECENT PODCASTS</div>
+							> RECENT</div>
 						</div>)}
 				</div>
-				<div className="topTen">
+				<div className="item-playlist">
 					{
 						playlist.map(pod => (
 							<Pod

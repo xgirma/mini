@@ -1,15 +1,26 @@
-.topTen {
-    padding-bottom: 1cm;
+.item-sort {
+    grid-area: sorter
 }
 
-.footer-menu {
-    font-weight: bold;
+.item-playlist {
+    grid-area: playlist;
+}
+
+
+.container-playlist {
+    display: grid;
+    grid-template-columns: 655px;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+            "sorter"
+            "playlist";
+    padding-bottom: 10px;
 }
 
 .sort-link {
     display: flex;
     font-weight: bold;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 0px 19px 5px 19px;
 }
 
@@ -19,5 +30,5 @@
 }
 
 .sort-inactive:hover {
-    color: #FFFF00;
+    color: #bfb671;
 }
