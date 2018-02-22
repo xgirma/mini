@@ -14,6 +14,24 @@
     grid-row-start: first;
     grid-row-end: end;
     color: #014421;
+    display: grid;
+    grid-template-columns: 10px 591px 10px;
+    grid-template-rows: auto;
+    grid-template-areas: " previous playing next";
+    justify-items: center;
+    margin-bottom: 10px;
+}
+
+.item-previous {
+    grid-area: previous
+}
+
+.item-playing {
+    grid-area: playing;
+}
+
+.item-next {
+    grid-area: next
 }
 
 .container-player {
@@ -24,11 +42,14 @@
             "player "
             "title";
     justify-items: center;
+    align-items: stretch;
+    justify-content: center;
+    align-content: start;
     background-image: url("logo.svg");
     background-size: 320px 228px;
     background-repeat: no-repeat;
     background-position: center;
     background-color: #F8F8FF;
-    border: 2px solid #bfb671;
+    border: 2px solid #F8F8FF;
     border-radius: 8px;
 }

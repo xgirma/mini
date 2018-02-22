@@ -19,6 +19,6 @@
             ". player ."
             ". playlist ."
             ". nowplaying .";
-    grid-row-gap: 10px;
+    grid-row-gap: 5px;
     justify-content: center;
 }

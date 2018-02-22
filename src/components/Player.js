@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import ReactPlayer from 'react-player';
+import FaChevronRight from 'react-icons/lib/fa/chevron-right'
+import FaChevronLeft from 'react-icons/lib/fa/chevron-left'
 import {playlistDefault} from '../data/default';
 import {playlistType} from '../type';
 import './Player.css';
@@ -21,13 +23,13 @@ class Player extends Component {
 	
 	state = {};
 	
-	handleBack = () => {
+	handlePrevious = () => {
 		const {playlist, onPodSelection, onAutoPlay} = this.props;
 		onPodSelection(playlist[9]._id);
 		onAutoPlay(true);
 	};
 	
-	handleForward = () => {
+	handleNext = () => {
 		const {playlist, onPodSelection, onAutoPlay} = this.props;
 		onPodSelection(playlist[1]._id);
 		onAutoPlay(true);
@@ -48,14 +50,28 @@ class Player extends Component {
 					/>
 				</div>
 				<div className="item-title">
-					<p>
+					<div
+						className="item-previous"
+						role="link"
+						onClick={this.handlePrevious}
+					>
+						<FaChevronLeft />
+					</div>
+					<div className="item-playing">
 						<b>
 							{episodeTitle.length > 60 ?
 								(`${episodeTitle.substring(0, 60)}...`) :
 								(episodeTitle.substring(0, 60))
 							}
 						</b>
-					</p>
+					</div>
+					<div
+						role="link"
+						className="item-next"
+						onClick={this.handleNext}
+					>
+						<FaChevronRight />
+					</div>
 				</div>
 			</div>
 		);

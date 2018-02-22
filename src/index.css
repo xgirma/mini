@@ -27,7 +27,10 @@ audio::-webkit-media-controls-panel, video::-webkit-media-controls-panel {
   text-align: right;
 }
 
-a { text-decoration : none; color : #000; }
+a {
+  text-decoration : none;
+  color : #000;
+}
 
 a:link, a:visited {
   color: black;
@@ -39,5 +42,4 @@ a:hover {
 
 a:active {
   color: #F8F8FF;
-  background-color: transparent;
 }
