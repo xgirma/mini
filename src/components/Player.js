@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import ReactPlayer from 'react-player';
-import FaChevronRight from 'react-icons/lib/fa/chevron-right'
-import FaChevronLeft from 'react-icons/lib/fa/chevron-left'
+import FaArrowCircleRight from 'react-icons/lib/fa/arrow-circle-right'
+import FaArrowCircleLeft from 'react-icons/lib/fa/arrow-circle-left'
 import {playlistDefault} from '../data/default';
 import {playlistType} from '../type';
 import './Player.css';
@@ -55,7 +55,7 @@ class Player extends Component {
 						role="link"
 						onClick={this.handlePrevious}
 					>
-						<FaChevronLeft />
+						<FaArrowCircleLeft />
 					</div>
 					<div className="item-playing">
 						<b>
@@ -70,7 +70,7 @@ class Player extends Component {
 						className="item-next"
 						onClick={this.handleNext}
 					>
-						<FaChevronRight />
+						<FaArrowCircleRight />
 					</div>
 				</div>
 			</div>

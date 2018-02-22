@@ -23,7 +23,8 @@
 }
 
 .item-previous {
-    grid-area: previous
+    grid-area: previous;
+    font-size:205%;
 }
 
 .item-playing {
@@ -31,7 +32,8 @@
 }
 
 .item-next {
-    grid-area: next
+    grid-area: next;
+    font-size:205%;
 }
 
 .container-player {

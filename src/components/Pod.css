@@ -1,23 +1,22 @@
-.pod {
-    width: 680px;
+.item-date {
+    grid-area: date;
 }
 
-.pod:hover {
-    color: #FFFF00;
+.item-ep-title {
+    grid-area: eptitle;
+}
+
+.container-pod {
+    display: grid;
+    grid-template-columns: 70px 585px;
+    grid-template-rows: auto;
+    grid-template-areas:
+            "date eptitle";
+    grid-column-gap: 10px;
+}
+
+.item-ep-title:hover {
+    color: #bfb671;
     font-weight: bold;
 }
 
-#pod_pod {
-    display: flex;
-}
-
-.date_pod {
-    padding-left: 21px;
-    width: 13%;
-}
-
-.episode_title_pod {
-    width: 87%;
-    overflow: hidden;
-    text-overflow: ellipsis
-}

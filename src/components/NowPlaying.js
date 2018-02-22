@@ -48,8 +48,8 @@ class Footer extends Component {
 	  const { like } = this.state;
 
 	  return (
-  <div className="footer">
-    <div className="all-footer">
+  <div className="now-playing">
+    <div className="all-playing">
       <div
         role="link"
         onClick={this.handleLike}
