@@ -1,22 +1,38 @@
-import React, { Component } from 'react';
+import React from 'react';
+import {HashRouter, NavLink} from "react-router-dom";
 import './Header.css';
 
-class Header extends Component {
-	static propTypes = {};
-
-	static defaultProps = {};
-
-	displayName = 'Header';
-
-	state = {};
-
-	render() {
-	  return (
-  <div className="header">
-    <h4> Home | Playlist | List </h4>
-  </div>
-	  );
-	}
-}
+const Header = () => (<HashRouter>
+	<div className="container-header">
+		
+		<span className="item-home">
+			<NavLink
+				to="/"
+				activeStyle={{ color:'#F8F8FF' }}
+				exact={true}
+			>Home
+			</NavLink>
+		</span>
+		
+		<span className="item-library">
+			<NavLink
+				to="/library"
+				activeStyle={{ color:'#F8F8FF' }}
+				exact={true}
+			>Library
+			</NavLink>
+		</span>
+		
+		<span className="item-about">
+			<NavLink
+				to="/about"
+				activeStyle={{ color:'#F8F8FF' }}
+				exact={true}
+			>About
+			</NavLink>
+		</span>
+	
+	</div>
+</HashRouter>);
 
 export default Header;

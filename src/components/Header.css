@@ -1,4 +1,22 @@
-.header {
-    display: flex;
-    align-items: flex-start;
+.item-home {
+    grid-area: home;
+}
+
+.item-library {
+    grid-area: library;
+}
+
+.item-about {
+    grid-area: about;
+}
+
+.container-header {
+    display: grid;
+    grid-template-columns:  auto 100px 100px 100px auto;
+    grid-template-rows: 30px;
+    grid-template-areas: ". home library about .";
+    justify-items: stretch;
+    font-weight: bold;
+    font-size: small;
+    color: black;
 }

@@ -94,7 +94,7 @@ class Home extends Component {
 		}
 		
 		return (
-			<div className="app">
+			<div className="container-home">
 				<Player
 					playlist={playlist}
 					autoPlay={autoPlay}

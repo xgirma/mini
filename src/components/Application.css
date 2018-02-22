@@ -1,5 +1,16 @@
-.app {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.item-header {
+    grid-area: header;
+}
+
+.item-body {
+    grid-area: body;
+}
+
+.container-app {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 200px;
+    grid-template-areas:
+            ". header ."
+            " body body body";
 }

@@ -4,11 +4,13 @@ import Home  from './Home';
 import Library  from './Library';
 import About  from './About';
 import NoMatch  from './NoMatch';
-import Menu  from './Menu';
+import Header  from './Header';
 import './Application.css';
 
-const Application = () => (<div>
-		<Menu />
+const Application = () => (<div className="container-app">
+		<div className="item-header">
+			<Header />
+		</div>
 		<HashRouter>
 			<Switch>
 				<Route exact path="/" component={Home}/>
