@@ -11,6 +11,8 @@
 }
 
 .container-header {
+    list-style: none;
+    margin: 0;
     display: grid;
     grid-template-columns:  auto 100px 100px 100px auto;
     grid-template-rows: 30px;

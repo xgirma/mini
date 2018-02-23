@@ -9,7 +9,7 @@ class Loading extends Component {
 	displayName = 'Loading';
 	
 	state = {
-		text: 'Loading...'
+		text: '...'
 	};
 	
 	// componentDidMount() {

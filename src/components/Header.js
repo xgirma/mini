@@ -3,36 +3,36 @@ import {HashRouter, NavLink} from "react-router-dom";
 import './Header.css';
 
 const Header = () => (<HashRouter>
-	<div className="container-header">
+	<ul className="container-header">
 		
-		<span className="item-home">
+		<li className="item-home">
 			<NavLink
 				to="/"
 				activeStyle={{ color:'#F8F8FF' }}
 				exact={true}
 			>Home
 			</NavLink>
-		</span>
+		</li>
 		
-		<span className="item-library">
+		<li className="item-library">
 			<NavLink
 				to="/library"
 				activeStyle={{ color:'#F8F8FF' }}
 				exact={true}
 			>Library
 			</NavLink>
-		</span>
+		</li>
 		
-		<span className="item-about">
+		<li className="item-about">
 			<NavLink
 				to="/about"
 				activeStyle={{ color:'#F8F8FF' }}
 				exact={true}
 			>About
 			</NavLink>
-		</span>
+		</li>
 	
-	</div>
+	</ul>
 </HashRouter>);
 
 export default Header;

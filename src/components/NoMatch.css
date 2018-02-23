@@ -1,5 +1,31 @@
-.NoMatch {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.item-owl {
+    grid-area: owl;
+    width: 520px;
+    height: 428px;
+}
+
+.item-rat {
+    grid-area: rat;
+    width: 200px;
+    height: 108px;
+    display: block;
+    margin-left: auto;
+}
+
+.item-quote {
+    grid-area: quote;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+
+
+.container-no-match {
+    display: grid;
+    grid-template-columns: 1fr 655px 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+            ". owl ."
+            ". rat ."
+            ". quote .";
 }

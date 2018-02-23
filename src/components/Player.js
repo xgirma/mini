@@ -47,6 +47,8 @@ class Player extends Component {
 						url={this.props.playlist[0].url}
 						playing={autoPlay}
 						controls
+						width={540}
+						hight={260}
 					/>
 				</div>
 				<div className="item-title">
