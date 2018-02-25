@@ -27,24 +27,17 @@ class TopTen extends Component {
 		
 		return (
 			<div className="container-playlist">
-				<div className="item-sort">
-					{sortByDate ?
-						(<div className="sort-link">
-							<div>RECENT</div>
-							<div
-								className="sort-inactive"
-								role="link"
-								onClick={onSort}
-							> LIKED</div>
-						</div>):
-						(<div className="sort-link">
-							<div> LIKED</div>
-							<div
-								className="sort-inactive"
-								role="link"
-								onClick={onSort}
-							> RECENT</div>
-						</div>)}
+				<div className="item-toggle">
+					<div className="toggle-background"
+					>
+					<button className={sortByDate
+						? "toggle-switch switch-open"
+						: "toggle-switch switch-closed"}
+						onClick={onSort}
+					>
+						{sortByDate?'Popular':'Recent'}
+					</button>
+					</div>
 				</div>
 				<div className="item-playlist">
 					{
