@@ -9,4 +9,5 @@
 
 .item-channel {
     grid-area: channel;
+    color:#F8F8FF !important;
 }
