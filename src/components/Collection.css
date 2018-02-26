@@ -9,4 +9,50 @@
 
 .item-collection {
     grid-area: collection;
+    display: grid;
+    grid-template-columns: 655px;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+            "title"
+            "detail";
 }
+
+.item-col-title {
+    grid-area: title;
+    display: grid;
+    grid-template-columns: 20px 635px;
+    grid-template-rows: auto;
+    grid-template-areas:
+            "opener colllink";
+    grid-column-gap: 10px;
+}
+
+.item-col-detail {
+    grid-area: detail;
+}
+
+.item-col-detail p {
+    margin:0;
+}
+
+.item-col-detail:hover p {
+    color: #bfb671;
+    font-weight: bold;
+}
+
+.item-opener {
+    grid-area: opener;
+    display: grid;
+    grid-template-columns: 20px;
+    grid-template-rows: auto;
+    font-weight: bold;
+}
+
+.item-coll-link {
+    grid-area: colllink;
+    display: grid;
+    grid-template-columns: 635px;
+    grid-template-rows: auto;
+}
+
+
