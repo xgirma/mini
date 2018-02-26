@@ -1,32 +1,29 @@
 import React, {Component} from 'react';
-import {HashRouter, NavLink} from "react-router-dom";
 import { channelDefault } from '../data/default';
 import PropTypes from 'prop-types';
 import './Channel.css';
 
 class Channel extends Component {
+	constructor(props){
+		super(props);
+		this.state = {
+			channel : props.match.params.channel
+		}
+	}
+	
 	static propTypes = {};
 	
 	static defaultProps = {};
 	
 	displayName = 'Channel';
 	
-	state = {};
-	
 	render() {
-		const channel = this.props.channel;
-		
+		const channel = this.state.channel;
+		console.log('channel: ', channel);
 		return (
 			<div className="container-channel">
 				<div className="item-channel">
-					<HashRouter>
-						<NavLink
-							to={`/library/${channel.title}`}
-							exact={true}
-						>
-							{channel.title}
-						</NavLink>
-					</HashRouter>
+					<h3>{channel}</h3>
 				</div>
 			</div>
 		)

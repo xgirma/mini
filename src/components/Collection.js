@@ -15,14 +15,16 @@ class Collection extends Component {
 	
 	render() {
 		const collection = this.props.collection;
+		const url = `/library/${collection.title}`;
 		
 		return (
 			<div className="container-collection">
 				<div className="item-collection">
 					<HashRouter>
 						<NavLink
-							to={`/library/${collection.title}`}
+							to={url}
 							exact={true}
+							channel={collection}
 						>
 							{collection.title}
 						</NavLink>

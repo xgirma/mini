@@ -5,10 +5,10 @@
     grid-row-gap: 5px;
     grid-template-areas:
             ". . ."
-            ". channels .";
+            ". library .";
     justify-content: center;
 }
 
 .item-channels {
-    grid-area: channels;
+    grid-area: library;
 }

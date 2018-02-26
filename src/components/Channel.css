@@ -1,13 +1,14 @@
 .container-channel {
     display: grid;
-    grid-template-columns: 655px;
-    grid-template-rows: auto;
+    grid-template-columns: 1fr 655px 1fr;
+    grid-template-rows: 30px auto auto auto;
+    grid-row-gap: 5px;
     grid-template-areas:
-            "channel";
-    padding-bottom: 10px;
+            ". . ."
+            ". channel .";
+    justify-content: center;
 }
 
 .item-channel {
     grid-area: channel;
-    color:#F8F8FF !important;
 }
