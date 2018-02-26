@@ -1,0 +1,12 @@
+.container-channel {
+    display: grid;
+    grid-template-columns: 655px;
+    grid-template-rows: auto;
+    grid-template-areas:
+            "channel";
+    padding-bottom: 10px;
+}
+
+.item-channel {
+    grid-area: channel;
+}

@@ -1,0 +1,14 @@
+.container-library {
+    display: grid;
+    grid-template-columns: 1fr 655px 1fr;
+    grid-template-rows: 30px auto auto auto;
+    grid-row-gap: 5px;
+    grid-template-areas:
+            ". . ."
+            ". channels .";
+    justify-content: center;
+}
+
+.item-channels {
+    grid-area: channels;
+}

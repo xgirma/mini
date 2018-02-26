@@ -10,7 +10,7 @@ class Library extends Component {
 	
 	static defaultProps = {};
 	
-	displayName = 'library';
+	displayName = 'Library';
 	
 	state = {
 		channels: channelsDefault,
@@ -45,6 +45,16 @@ class Library extends Component {
 		console.log(channels);
 		return (
 			<div className="container-library">
+				<div className="item-channels">
+					{
+						channels.map(channel => (
+							<Channel
+								key={channel._id}
+								channel={channel}
+							/>
+						))
+					}
+				</div>
 			</div>
 		)
 	}
