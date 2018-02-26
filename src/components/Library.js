@@ -42,7 +42,7 @@ class Library extends Component {
 	
 	render() {
 		const channels = this.state.channels;
-		console.log(channels);
+		
 		return (
 			<div className="container-library">
 				<div className="item-channels">
