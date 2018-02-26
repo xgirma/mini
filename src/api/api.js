@@ -21,7 +21,7 @@ async function getTenLiked() {
 async function submitLike(id) {
   try {
     const response = await fetch(`${BASE_URL}/pods/${id}`, {
-      method: 'POSt',
+      method: 'POST',
 	    headers: {
 		    Accept: 'application/json',
 		    'Content-Type': 'application/json',
@@ -33,9 +33,19 @@ async function submitLike(id) {
   }
 }
 
+async function getChannels(){
+  try {
+    const response = await fetch(`${BASE_URL}/channels`)
+    return response.json();
+  } catch (err){
+    throw Error(err);
+  }
+}
+
 export {
   getRecentTen,
   getTenLiked,
   submitLike,
+	getChannels,
 };
 

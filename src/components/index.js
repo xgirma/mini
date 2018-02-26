@@ -1,5 +1,6 @@
 import About from './About';
 import Application from './Application';
+import Channel from './Channel';
 import Header from './Header';
 import Home from './Home';
 import Library from './Library';
@@ -13,6 +14,7 @@ import Pod from './Pod';
 export {
 	About,
 	Application,
+	Channel,
   Header,
   Home,
 	Library,
