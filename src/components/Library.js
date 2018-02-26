@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { getChannels } from "../api/api";
-import { Channel } from './index';
+import { Collection } from './index';
 import { channelsDefault } from '../data/default'
 import PropTypes from 'prop-types';
 import './Library.css';
@@ -13,7 +13,7 @@ class Library extends Component {
 	displayName = 'Library';
 	
 	state = {
-		channels: channelsDefault,
+		collections: channelsDefault,
 		isLoading: false,
 		error: null,
 	};
@@ -29,7 +29,7 @@ class Library extends Component {
 		try {
 			const response = await getChannels();
 			this.setState({
-				channels: response,
+				collections: response,
 				isLoading: false,
 			});
 		} catch (err) {
@@ -41,16 +41,16 @@ class Library extends Component {
 	}
 	
 	render() {
-		const channels = this.state.channels;
+		const collections = this.state.collections;
 		
 		return (
 			<div className="container-library">
 				<div className="item-channels">
 					{
-						channels.map(channel => (
-							<Channel
-								key={channel._id}
-								channel={channel}
+						collections.map(collection => (
+							<Collection
+								key={collection._id}
+								collection={collection}
 							/>
 						))
 					}

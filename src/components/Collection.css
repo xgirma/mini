@@ -1,0 +1,12 @@
+.container-collection {
+    display: grid;
+    grid-template-columns: 655px;
+    grid-template-rows: auto;
+    grid-template-areas:
+            "collection";
+    padding-bottom: 10px;
+}
+
+.item-collection {
+    grid-area: collection;
+}

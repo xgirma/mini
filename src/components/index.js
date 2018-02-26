@@ -1,6 +1,7 @@
 import About from './About';
 import Application from './Application';
 import Channel from './Channel';
+import Collection from './Collection';
 import Header from './Header';
 import Home from './Home';
 import Library from './Library';
@@ -15,6 +16,7 @@ export {
 	About,
 	Application,
 	Channel,
+	Collection,
   Header,
   Home,
 	Library,
