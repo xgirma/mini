@@ -35,7 +35,16 @@ async function submitLike(id) {
 
 async function getChannels(){
   try {
-    const response = await fetch(`${BASE_URL}/channels`)
+    const response = await fetch(`${BASE_URL}/channels`);
+    return response.json();
+  } catch (err){
+    throw Error(err);
+  }
+}
+
+async function getChannel (title, type){
+  try {
+    const response = await fetch(`${BASE_URL}/pods/ten/${title}/${type}`);
     return response.json();
   } catch (err){
     throw Error(err);
@@ -47,5 +56,6 @@ export {
   getTenLiked,
   submitLike,
 	getChannels,
+	getChannel
 };
 

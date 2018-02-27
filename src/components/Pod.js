@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import GoDeviceCameraVideo from 'react-icons/lib/go/device-camera-video';
 import moment from 'moment';
 import {podType} from '../type';
 import {podDefault} from '../data/default';
@@ -28,6 +29,7 @@ class Pod extends Component {
 	render() {
 		const {pod, sortByDate} = this.props;
 		const published = moment(pod.published).format('MMM DD YY');
+		const videoTypes = ['video/mp4', 'video/quicktime'];
 		
 		return (
 			
@@ -40,7 +42,12 @@ class Pod extends Component {
 					<b>{sortByDate ? published : pod.likes}</b>
 				</div>
 				<div className="item-ep-title">
-					{pod.displayText}
+					{pod.displayText}{' '}
+					<span>
+						{(pod.media_type === 'video/mp4'
+							|| pod.media_type === 'video/quicktime')
+							?  <GoDeviceCameraVideo /> : null}
+					</span>
 				</div>
 			</div>
 		);
