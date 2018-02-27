@@ -37,7 +37,9 @@ class Collection extends Component {
 		const detail = (<div className="item-col-details">
 			<p>{description_short? description_short: null}</p>
 			<p>{description_long? description_long: null}</p>
-			<p>{owner_name? owner_name: null} {'| '} {owner_email? owner_email: null}</p>
+			{(owner_name && owner_email)
+				? ( <p>{owner_name? owner_name: null} {'| '} {owner_email? owner_email: null}</p> )
+				: null}
 			<p>{link? link: null}</p>
 		</div>);
 		
