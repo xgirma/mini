@@ -91,8 +91,6 @@ class Channel extends Component {
 	
 	render() {
 		const channel = this.state.channel;
-		console.log('channel: ', channel);
-		console.log('playlist: ', this.state.playlist);
 		
 		const {
 			playlist, isLoading, autoPlay, sortByDate,
